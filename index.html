@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pinnacles NPS | GEOG777 </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta charset="utf-8">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:300,400,600" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!-- Include Leaflet.draw stylesheet -->
+<link rel="stylesheet" href="css/leaflet.css" />
+<link rel="stylesheet" href="css/leaflet.draw.css" />
+<!--<jQuery-ui stylesheet>-->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/humanity/jquery-ui.css">
+
+
+</head>
+<body>
+
+<div id="wrapper">
+ <div id="map"></div>
+
+<!-- CARTO dropdown box -->
+ <div id="searchbox">
+    <select id="selectDrop">
+            <option selected value="">Select Park Trail</option>
+    </select>
+</div>
+
+<!-- CARTO Filter below-->
+<div id="filterControls">
+              <h3>Park Features</h3>
+            <ul>
+              <li>
+                <input type="checkbox" name="parkTypes[]" id="Restroom" value="Restroom" checked>
+                <label for="Restroom">Restroom</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parkTypes[]" id="Picnic Area" value="Picnic Area" checked>
+                <label for="Picnic">Picnic Area</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parkTypes[]" id="Potable Water" value="Potable Water" checked>
+                <label for="Potable Water">Potable Water</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parkTypes[]" id="Amphitheater" value="Amphitheater" checked>
+                <label for="Amphitheater">Amphitheater</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parkTypes[]" id="Campground" value="Campground" checked>
+                <label for="Campground">Campground</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parkTypes[]" id="Campsite" value="Campsite" checked>
+                <label for="Campsite">Campsites</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parkTypes[]" id="Education Center" value="Education Center" checked>
+                <label for="Education Center">Education Center</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parkTypes[]" id="Entrance Station" value="Entrance Station" checked>
+                <label for="Entrance Station">Entrance Station</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parkTypes[]" id="Trailhead" value="Trailhead" checked>
+                <label for="Trailhead">Trailhead</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parkTypes[]" id="Visitor Center" value="Visitor Center" checked>
+                <label for="Visitor Center">Visitor Center</label>
+              </li>
+            </ul>
+          </div>
+
+
+<!-- DataVis controls and dialog -->
+
+<div id="controls">
+  <p>Pinnacles National Park | Tarantula Sighting Report <br><small>Click the spider icons for more information, or report your own sighting</small></br></p>
+  <input type="button" onclick="startEdits()" value="Start Report">
+  <input type="button" onclick="stopEdits()" value="Stop Report">
+  <input type="button" onclick="getLocation()" value="Find Location">
+  <input type="button" onclick="closeFilter()" value="Park Features"><br>
+</div>
+
+
+
+<div id="dialog" title="Report Information">
+<form>
+  <fieldset style="border: none;">
+    <ul style="list-style-type: none; padding-left: 0px">
+      <li><label for="email">Your Email</label></li>
+      <li><input type="text" name="email" id="email" placeholder="Enter your email" class="text ui-widget-content ui-corner-all"></li>
+      <li><label for="description">About Tarantula Sighting</label></li>
+      <li><input type="text" name="description" id="description" placeholder="Description" class="text ui-widget-content ui-corner-all"></li>
+      <li><label for="date">Date</label></li>
+      <li><input type="text" name="date" id="date" placeholder="Date of sighting" class="text ui-widget-content ui-corner-all"></li>
+    </ul>
+    <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+  </fieldset>
+</form>
+</div>
+
+</div>
+
+
+
+<!-- Include CARTO.js -->
+<script src="https://libs.cartocdn.com/carto.js/v4.1.11/carto.min.js"></script>
+
+<!-- Include Laflet.draw, jQuery and jQuery.ui -->
+<script src="js/leaflet.js"></script>
+<script src="js/leaflet.draw.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<!--The script below is sitting locally. It's a different version from the tutorial. Test this later. -->
+<!--<script src="js/jquery-3.4.1.min.js"></script>-->
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
