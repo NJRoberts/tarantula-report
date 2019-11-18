@@ -321,7 +321,7 @@ function setData() {
 
 // Submit data to the PHP using a jQuery Post method
  var submitToProxy = function(q){
-   $.post("../tarantula-report/php/callProxy.php", { // <--- Enter the path to your callProxy.php file here
+   $.post("php/callProxy.php", { // <--- Enter the path to your callProxy.php file here
      qurl:q,
      cache: false,
      timeStamp: new Date().getTime()
