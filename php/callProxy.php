@@ -1,5 +1,5 @@
 <?php
-include 'https://njroberts.github.io/tarantula-report/php/cartoDBProxy.php ';
+include '../tarantula-report/php/cartoDBProxy.php';
 //			^CHANGE THIS TO THE PATH TO YOUR cartodbProxy.php
 $queryURL = $_POST['qurl'];
 $return = goProxy($queryURL);
